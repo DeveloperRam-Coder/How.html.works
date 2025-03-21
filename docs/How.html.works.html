@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Tags Explained in Depth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      background: #eee;
+      padding: 10px;
+      border-left: 5px solid #333;
+    }
+    .tag-list {
+      margin: 10px 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .tag-list li {
+      background: #fafafa;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 3px solid #007BFF;
+    }
+    code {
+      font-weight: bold;
+      color: #d63384;
+    }
+    details {
+      margin-top: 5px;
+      font-size: 0.9em;
+      background: #e9ecef;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    .visual {
+      display: block;
+      max-width: 100%;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+    }
+    footer p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Important HTML Tags List &amp; How They Work</h1>
+  </header>
+  
+  <nav>
+    <a href="#basic">Basic Structure</a>
+    <a href="#metadata">Metadata &amp; Head</a>
+    <a href="#text">Text Formatting</a>
+    <a href="#links">Links &amp; Navigation</a>
+    <a href="#lists">Lists</a>
+    <a href="#tables">Tables</a>
+    <a href="#forms">Forms &amp; Inputs</a>
+    <a href="#media">Media</a>
+    <a href="#semantic">Semantic HTML</a>
+    <a href="#interactive">Interactive</a>
+    <a href="#misc">Miscellaneous</a>
+  </nav>
+  
+  <div class="container">
+    
+    <!-- 1. Basic Structure Tags -->
+    <section id="basic">
+      <h2>1. Basic Structure Tags</h2>
+      <p>These tags form the backbone of any HTML document:</p>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;!DOCTYPE html&gt;</code> – Declares the document type.
+          <details>
+            <summary>More details</summary>
+            <p>
+              This declaration tells the browser that the document is written in HTML5, ensuring it is parsed in standards-compliant mode.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;html&gt;</code> – The root element of the HTML document.
+          <details>
+            <summary>More details</summary>
+            <p>
+              All other HTML elements are contained within the <code>&lt;html&gt;</code> tag, making it the container for the entire document.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;head&gt;</code> – Contains meta-information, title, and linked resources.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;head&gt;</code> section holds metadata, links to external files (like CSS and JavaScript), and information for search engines. It does not display content directly.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;body&gt;</code> – Holds the visible content on the webpage.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;body&gt;</code> element contains everything that is rendered on the page, including text, images, videos, links, etc.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Basic+Structure+Diagram" alt="Basic HTML Structure Diagram" class="visual">
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </section>
+    
+    <!-- 2. Metadata & Head Tags -->
+    <section id="metadata">
+      <h2>2. Metadata &amp; Head Tags</h2>
+      <p>These tags set up important metadata and link to external resources:</p>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;meta&gt;</code> – Provides metadata such as charset, description, and viewport.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;meta&gt;</code> tag is used to specify various metadata information, which can include the character set (<code>charset</code>), page description, keywords for search engines, and instructions for mobile devices.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;title&gt;</code> – Specifies the title shown in the browser tab.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The text within the <code>&lt;title&gt;</code> tag is what appears in the browser’s title bar or tab, and is also used as the title in search engine results.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;link&gt;</code> – Links external resources like stylesheets.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;link&gt;</code> element is commonly used to link external CSS files or to specify relationships with other documents. It is placed inside the <code>&lt;head&gt;</code> section.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;style&gt;</code> – Embeds internal CSS styles.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;style&gt;</code> tag is used for including CSS rules directly within an HTML document. It’s useful for small styles or prototyping.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;script&gt;</code> – Embeds or references JavaScript.
+          <details>
+            <summary>More details</summary>
+            <p>
+              This tag is used to include JavaScript code in an HTML document. It can either contain inline code or reference an external file via the <code>src</code> attribute.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;base&gt;</code> – Sets a base URL for relative links.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;base&gt;</code> element specifies a base URL that will be used for all relative URLs in the document. It ensures that links resolve correctly, especially when the page is moved.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Head+Section+Diagram" alt="Head Section Diagram" class="visual">
+    </section>
+    
+    <!-- 3. Text Formatting Tags -->
+    <section id="text">
+      <h2>3. Text Formatting Tags</h2>
+      <p>These tags help style and structure textual content:</p>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;h1&gt; to &lt;h6&gt;</code> – Heading tags from largest to smallest.
+          <details>
+            <summary>More details</summary>
+            <p>
+              Heading tags are used to define headings on a page. They help organize content hierarchically and are important for SEO. <code>&lt;h1&gt;</code> is the most important, while <code>&lt;h6&gt;</code> is the least.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;p&gt;</code> – Defines paragraphs.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;p&gt;</code> tag wraps blocks of text into paragraphs. It automatically adds some vertical spacing before and after the text.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;br&gt;</code> – Inserts a line break.
+          <details>
+            <summary>More details</summary>
+            <p>
+              A <code>&lt;br&gt;</code> tag forces a line break in the text. It is an empty element and does not require a closing tag.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;hr&gt;</code> – Inserts a horizontal line.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;hr&gt;</code> tag creates a thematic break in the content, often used to separate sections. It is rendered as a horizontal rule.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;b&gt;</code> &amp; <code>&lt;strong&gt;</code> – Bold text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              Both tags make text bold. While <code>&lt;b&gt;</code> is used purely for visual emphasis, <code>&lt;strong&gt;</code> also indicates that the text has strong importance.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;i&gt;</code> &amp; <code>&lt;em&gt;</code> – Italic text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;i&gt;</code> tag displays text in italics for stylistic purposes. The <code>&lt;em&gt;</code> tag is used to emphasize text semantically and is often rendered as italics.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;mark&gt;</code> – Highlights text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;mark&gt;</code> element highlights text by giving it a background color, indicating it is of special relevance.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;u&gt;</code> – Underlines text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;u&gt;</code> tag underlines text. Although its use is more stylistic today, it can also indicate non-standard text such as proper names in some contexts.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;del&gt;</code> &amp; <code>&lt;ins&gt;</code> – Indicate deleted or inserted text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;del&gt;</code> element shows text that has been removed, often rendered with a strike-through. The <code>&lt;ins&gt;</code> element indicates text that has been added.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;small&gt;</code> – Small text.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;small&gt;</code> tag is used for fine print or side comments. It renders the text in a smaller size than the surrounding text.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;sup&gt;</code> &amp; <code>&lt;sub&gt;</code> – Superscript and subscript.
+          <details>
+            <summary>More details</summary>
+            <p>
+              <code>&lt;sup&gt;</code> raises text above the normal line (useful for exponents), while <code>&lt;sub&gt;</code> lowers text below the baseline (useful for chemical formulas).
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;blockquote&gt;</code> – For quotations.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;blockquote&gt;</code> tag is used for long quotations from other sources. It usually indents the quoted text and may include citation information.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;cite&gt;</code> – To cite references.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;cite&gt;</code> element is used to reference the title of a work or the source of a quotation, giving proper credit.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;code&gt;</code> &amp; <code>&lt;pre&gt;</code> – For displaying code.
+          <details>
+            <summary>More details</summary>
+            <p>
+              <code>&lt;code&gt;</code> is used for inline code snippets, while <code>&lt;pre&gt;</code> preserves whitespace and formatting for longer blocks of code or preformatted text.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;abbr&gt;</code> &amp; <code>&lt;kbd&gt;</code> – Abbreviations and keyboard inputs.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;abbr&gt;</code> tag is used for abbreviations or acronyms and can provide a full description via the <code>title</code> attribute. The <code>&lt;kbd&gt;</code> element represents text to be entered by the user, such as keyboard inputs.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Text+Formatting+Examples" alt="Text Formatting Examples" class="visual">
+    </section>
+    
+    <!-- 4. Links & Navigation Tags -->
+    <section id="links">
+      <h2>4. Links &amp; Navigation Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;a&gt;</code> – Creates hyperlinks.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The anchor tag (<code>&lt;a&gt;</code>) creates a clickable link. The <code>href</code> attribute specifies the URL or path to which the link points. It can also be used to create in-page anchors.
+            </p>
+          </details>
+          <br>Example: <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code>
+        </li>
+        <li>
+          <code>&lt;nav&gt;</code> – Defines navigation blocks.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;nav&gt;</code> element groups a set of navigation links. It helps search engines and assistive technologies understand the structure of the site.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;button&gt;</code> – Creates clickable buttons.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;button&gt;</code> element defines a clickable button, which can be used for forms, dialogs, or interactive features. It is more accessible than using a styled link.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Navigation+and+Links" alt="Links and Navigation Visual" class="visual">
+    </section>
+    
+    <!-- 5. Lists Tags -->
+    <section id="lists">
+      <h2>5. Lists Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;ul&gt;</code> – Unordered (bullet) list.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The unordered list (<code>&lt;ul&gt;</code>) creates a bulleted list. Each item in the list is defined with an <code>&lt;li&gt;</code> element.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;ol&gt;</code> – Ordered (numbered) list.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The ordered list (<code>&lt;ol&gt;</code>) creates a numbered list. It is useful when the sequence of items is important.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;li&gt;</code> – List item (used within lists).
+          <details>
+            <summary>More details</summary>
+            <p>
+              The list item (<code>&lt;li&gt;</code>) tag represents an individual item within a list. It is used within both ordered and unordered lists.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code> – Definition list and its terms.
+          <details>
+            <summary>More details</summary>
+            <p>
+              A definition list (<code>&lt;dl&gt;</code>) is used to group terms and their definitions. The term is marked by <code>&lt;dt&gt;</code> and its definition by <code>&lt;dd&gt;</code>.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Lists+Visualization" alt="Lists Example Visual" class="visual">
+    </section>
+    
+    <!-- 6. Table Tags -->
+    <section id="tables">
+      <h2>6. Table Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;table&gt;</code> – The container for a table.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;table&gt;</code> element is used to create a table in HTML. It groups together table rows, headers, and data cells.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;tr&gt;</code> – Table row.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;tr&gt;</code> tag defines a row in a table. It contains table header cells (<code>&lt;th&gt;</code>) or table data cells (<code>&lt;td&gt;</code>).
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;td&gt;</code> – Table data (cell).
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;td&gt;</code> element represents a standard cell in a table, containing data. It is placed within a <code>&lt;tr&gt;</code> element.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;th&gt;</code> – Table header cell.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;th&gt;</code> element defines a header cell in a table, which is typically displayed in bold and centered by default.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;caption&gt;</code> – Caption for the table.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;caption&gt;</code> tag provides a title or explanatory text for a table. It is displayed above or below the table, depending on browser defaults.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> – Grouping and defining columns.
+          <details>
+            <summary>More details</summary>
+            <p>
+              These tags allow you to group columns in a table and apply styles or attributes to them collectively.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>rowspan</code> &amp; <code>colspan</code> – Merge rows or columns.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>rowspan</code> attribute allows a cell to span multiple rows, while <code>colspan</code> allows a cell to span multiple columns, facilitating complex table layouts.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Table+Structure" alt="Table Structure Diagram" class="visual">
+      <pre>
+&lt;table&gt;
+  &lt;caption&gt;Student Grades&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Grade&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alice&lt;/td&gt;
+    &lt;td&gt;A&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    </section>
+    
+    <!-- 7. Forms & Input Tags -->
+    <section id="forms">
+      <h2>7. Forms &amp; Input Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;form&gt;</code> – Creates a form for user inputs.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;form&gt;</code> element acts as a container for input elements, buttons, and other controls. It is used to collect user data and submit it to a server.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;input&gt;</code> – An input field (text, password, etc.).
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;input&gt;</code> element is a self-closing tag used for various types of user data input, such as text, passwords, emails, and more. The type attribute specifies the kind of input.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;textarea&gt;</code> – Multi-line text input.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;textarea&gt;</code> element is used for multi-line text input. Unlike <code>&lt;input&gt;</code>, it has an opening and closing tag.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;label&gt;</code> – Associates a text label with a form element.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;label&gt;</code> element improves accessibility by connecting text to form controls via the <code>for</code> attribute.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;select&gt;</code> &amp; <code>&lt;option&gt;</code> – Dropdown lists.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;select&gt;</code> element creates a drop-down list, and the <code>&lt;option&gt;</code> tags define the available options.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;fieldset&gt;</code> &amp; <code>&lt;legend&gt;</code> – Group related form controls.
+          <details>
+            <summary>More details</summary>
+            <p>
+              A <code>&lt;fieldset&gt;</code> groups together related form elements, and the <code>&lt;legend&gt;</code> provides a caption for the group, enhancing accessibility.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;datalist&gt;</code> – Provides auto-suggestions for inputs.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;datalist&gt;</code> element contains a set of <code>&lt;option&gt;</code> elements that represent predefined options for an <code>&lt;input&gt;</code> element.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;output&gt;</code> – Displays result data.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;output&gt;</code> element is used to display the result of a calculation or user action, often updated dynamically via JavaScript.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Form+Example" alt="Form Example Visual" class="visual">
+      <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+      </pre>
+    </section>
+    
+    <!-- 8. Media Tags -->
+    <section id="media">
+      <h2>8. Media Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;img&gt;</code> – Embeds an image.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;img&gt;</code> tag is used to embed images. It requires a <code>src</code> attribute that points to the image location and an <code>alt</code> attribute for accessibility.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;picture&gt;</code> – Supports responsive images.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;picture&gt;</code> element allows you to define multiple sources for an image. This is useful for serving different images based on the screen size or resolution.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;audio&gt;</code> – Embeds an audio file.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;audio&gt;</code> element embeds audio content. It supports various audio formats and includes attributes to control playback.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;video&gt;</code> – Embeds a video file.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;video&gt;</code> element is used for embedding video content. It supports multiple video formats and provides built-in controls for playback.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;source&gt;</code> – Specifies multiple media sources.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;source&gt;</code> element is used inside media elements (<code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>) to provide multiple file formats. The browser selects the first supported format.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;track&gt;</code> – Provides subtitles for videos.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;track&gt;</code> element specifies text tracks (subtitles, captions, etc.) for media elements. It enhances accessibility for video content.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;svg&gt;</code> &amp; <code>&lt;canvas&gt;</code> – For vector graphics and drawing areas.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;svg&gt;</code> element is used for scalable vector graphics, while the <code>&lt;canvas&gt;</code> provides a space for dynamic, scriptable rendering of graphics.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;figure&gt;</code> &amp; <code>&lt;figcaption&gt;</code> – Groups media with captions.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;figure&gt;</code> element encapsulates media content, and <code>&lt;figcaption&gt;</code> provides a caption for that content, enhancing context and accessibility.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Media+Tags+Visualization" alt="Media Tags Diagram" class="visual">
+    </section>
+    
+    <!-- 9. Semantic HTML Tags -->
+    <section id="semantic">
+      <h2>9. Semantic HTML Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;header&gt;</code> – Defines a page or section header.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;header&gt;</code> element typically contains introductory content or navigational links. It is used to wrap a section's header content.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;footer&gt;</code> – Defines a page or section footer.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;footer&gt;</code> element is used for closing content, such as contact information, copyright notices, or links related to the document.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;article&gt;</code> – Represents a self-contained piece of content.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;article&gt;</code> element is used for independent, self-contained content that could be distributed or reused, such as a blog post, news article, or forum post.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;section&gt;</code> – Groups related content.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;section&gt;</code> tag divides the document into thematic sections, each typically having its own heading.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;aside&gt;</code> – For sidebar content.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;aside&gt;</code> element is used for content that is tangentially related to the main content, such as sidebars, call-out boxes, or related links.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;main&gt;</code> – Indicates the main content of the document.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;main&gt;</code> element represents the dominant content of the <code>&lt;body&gt;</code> of a document. It should be unique and not include content repeated across pages.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;details&gt;</code> &amp; <code>&lt;summary&gt;</code> – Creates collapsible content.
+          <details>
+            <summary>More details</summary>
+            <p>
+              These elements allow you to create sections of content that the user can toggle open or closed. This is useful for FAQs, collapsible menus, or additional details.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;time&gt;</code> – Represents date/time information.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;time&gt;</code> element is used to represent dates or times, either in a machine-readable format via the datetime attribute or in a human-friendly way.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;progress&gt;</code> &amp; <code>&lt;meter&gt;</code> – Represent progress and measurements.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;progress&gt;</code> element displays the progress of a task, while the <code>&lt;meter&gt;</code> element represents a scalar measurement within a known range, such as a disk usage gauge.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Semantic+HTML+Diagram" alt="Semantic HTML Visual" class="visual">
+    </section>
+    
+    <!-- 10. Interactive & Web Components -->
+    <section id="interactive">
+      <h2>10. Interactive &amp; Web Components</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;dialog&gt;</code> – Creates a pop-up dialog box.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;dialog&gt;</code> element is used to create modal or non-modal dialog boxes. It can be controlled with JavaScript to open or close, providing interactive pop-up windows.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;template&gt;</code> – Holds reusable HTML that isn’t rendered immediately.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;template&gt;</code> element is used to store HTML that is not displayed when the page loads but can be cloned and inserted into the document later using JavaScript.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;slot&gt;</code> – Allows insertion of custom content in web components.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;slot&gt;</code> element is used inside web components to define where external content should be inserted. It makes the component more flexible and reusable.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;shadow&gt;</code> – Defines shadow DOM elements (advanced).
+          <details>
+            <summary>More details</summary>
+            <p>
+              The concept of shadow DOM (often defined using <code>attachShadow</code> in JavaScript rather than a dedicated tag) encapsulates a component’s DOM and styling so that it does not conflict with the rest of the page. The notation <code>&lt;shadow&gt;</code> is sometimes used in documentation to illustrate this concept.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Interactive+Components" alt="Interactive Components Visual" class="visual">
+    </section>
+    
+    <!-- 11. Miscellaneous Tags -->
+    <section id="misc">
+      <h2>11. Miscellaneous Tags</h2>
+      <ul class="tag-list">
+        <li>
+          <code>&lt;iframe&gt;</code> – Embeds another webpage.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;iframe&gt;</code> element embeds an external webpage or content within the current page. It creates an inline frame that acts as a separate browsing context.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;embed&gt;</code> – Embeds external content such as PDFs or Flash.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;embed&gt;</code> tag is used to embed external applications or interactive content (like PDFs or Flash) into an HTML document.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;object&gt;</code> – Embeds multimedia objects.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;object&gt;</code> element represents external resources, like images, PDFs, or multimedia, and can be used as an alternative to <code>&lt;embed&gt;</code>.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;param&gt;</code> – Sets parameters for embedded objects.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;param&gt;</code> tag is used to define parameters for plugins embedded with the <code>&lt;object&gt;</code> element.
+            </p>
+          </details>
+        </li>
+        <li>
+          <code>&lt;noscript&gt;</code> – Provides fallback content if JavaScript is disabled.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The <code>&lt;noscript&gt;</code> element contains content that will be displayed if the user's browser does not support JavaScript or if it is disabled.
+            </p>
+          </details>
+        </li>
+      </ul>
+      <img src="https://via.placeholder.com/800x200?text=Miscellaneous+Elements" alt="Miscellaneous Tags Visual" class="visual">
+    </section>
+    
+    <!-- Tips & Tricks -->
+    <section id="tips">
+      <h2>Tips &amp; Tricks</h2>
+      <ul class="tag-list">
+        <li>
+          Use semantic tags for better SEO &amp; accessibility.
+          <details>
+            <summary>More details</summary>
+            <p>
+              Semantic HTML tags clearly describe their meaning in a human- and machine-readable way. This improves accessibility, SEO, and maintainability of your web pages.
+            </p>
+          </details>
+        </li>
+        <li>
+          Optimize image loading with <code>loading="lazy"</code>.
+          <details>
+            <summary>More details</summary>
+            <p>
+              Using the <code>loading="lazy"</code> attribute on images defers loading offscreen images until the user scrolls near them, which improves page performance.
+            </p>
+          </details>
+        </li>
+        <li>
+          Use <code>&lt;meta name="viewport"&gt;</code> for mobile responsiveness.
+          <details>
+            <summary>More details</summary>
+            <p>
+              The viewport meta tag controls layout on mobile browsers by setting the width of the viewport to the device's width and scaling the content accordingly.
+            </p>
+          </details>
+        </li>
+        <li>
+          Apply ARIA roles &amp; attributes for improved accessibility.
+          <details>
+            <summary>More details</summary>
+            <p>
+              ARIA (Accessible Rich Internet Applications) roles and attributes provide additional semantic information to assistive technologies, enhancing the accessibility of web content.
+            </p>
+          </details>
+        </li>
+        <li>
+          Minify HTML, CSS, and JS to enhance performance.
+          <details>
+            <summary>More details</summary>
+            <p>
+              Minification reduces file sizes by removing unnecessary characters (like spaces and comments) from your code, leading to faster load times and improved performance.
+            </p>
+          </details>
+        </li>
+      </ul>
+    </section>
+    
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 HTML Learning Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
